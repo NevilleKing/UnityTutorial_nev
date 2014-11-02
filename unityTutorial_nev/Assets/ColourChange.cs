@@ -19,6 +19,7 @@ public class ColourChange : MonoBehaviour {
 		if (collision.gameObject.tag == "floor"){
 			this.renderer.material.color = new Color(0,1,0);
 			onFloor = true;
+			GameObject.FindGameObjectWithTag("gui").SendMessage("increaseScore");
 		}
 	}
 }
